@@ -1,6 +1,7 @@
 <template>
     <div>
-        <h1>{{post.voiture}} {{post.totem}}</h1>
+        <h1>{{post.citation}}</h1>
+        <h2> {{post.authors}}</h2>
     
     </div>
 </template>
