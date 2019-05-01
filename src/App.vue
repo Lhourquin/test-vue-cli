@@ -1,19 +1,30 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Index v-for="post in posts" v-bind:key="post" :post="post"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Index from './components/Index.vue'
 
 export default {
   name: 'app',
-  components: {
-    HelloWorld
+  components : {
+  Index
+  },
+  data () {
+    return {
+      posts : [
+      {totem : 'koh lanta'},
+      {voiture : 'audi'}
+      ]
+    }
+      
+
+    }
   }
-}
+
 </script>
 
 <style lang="scss">
