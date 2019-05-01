@@ -16,8 +16,10 @@ export default {
   data () {
     return {
       posts : [
-      {totem : 'koh lanta'},
-      {voiture : 'audi'}
+      {citation : 'si tu est née en france tu sais que tu est européens ?',
+      authors : 'Kenny'},
+      {citation : 'fumer c`est mal .. m`voyer',
+      authors : 'mr mcKey'}
       ]
     }
       
