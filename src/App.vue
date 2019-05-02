@@ -1,31 +1,27 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <Index v-for="post in posts" v-bind:key="post" :post="post"/>
+  <NavBar/>
+  <Header/>
+  <Footer/>
+  <Main/>
   </div>
 </template>
 
 <script>
-import Index from './components/Index.vue'
+import NavBar from './components/NavBar.vue'
+import Header from './components/Header.vue'
+import Footer from './components/Footer.vue'
+import Main from './components/Main.vue'
 
 export default {
   name: 'app',
   components : {
-  Index
-  },
-  data () {
-    return {
-      posts : [
-      {citation : 'si tu est née en france tu sais que tu est européens ?',
-      authors : 'Kenny'},
-      {citation : 'fumer c`est mal .. m`voyer',
-      authors : 'mr mcKey'}
-      ]
-    }
-      
-
-    }
+    NavBar,
+    Header,
+    Main,
+    Footer
   }
+ }
 
 </script>
 
@@ -34,8 +30,10 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  display : grid;
+  grid-template-areas: "nav header"
+                       "nav main"
+                       "nav footer";
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
