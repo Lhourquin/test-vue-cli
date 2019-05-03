@@ -1,7 +1,8 @@
 <template>
   <div id="app">
   <NavBar/>
-  <Header/>
+  <Header/>  
+  <Button v-on:test="test('Sandra')"/>
   <Footer/>
   <Main/>
   </div>
@@ -12,6 +13,7 @@ import NavBar from './components/NavBar.vue'
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
 import Main from './components/Main.vue'
+import Button from './components/Button.vue'
 
 export default {
   name: 'app',
@@ -19,8 +21,16 @@ export default {
     NavBar,
     Header,
     Main,
-    Footer
-  }
+    Footer,
+    Button
+  },
+  methods : {
+    test : function (string) {
+       
+      alert(string)
+      
+    }
+    }
  }
 
 </script>
@@ -33,7 +43,10 @@ export default {
   display : grid;
   grid-template-areas: "nav header"
                        "nav main"
+                       "nav button1" 
+                       "nav bouton2"
                        "nav footer";
   color: #2c3e50;
+  
 }
 </style>
