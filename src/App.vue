@@ -2,7 +2,7 @@
   <div id="app">
   <NavBar/>
   <Header/>  
-  <Button v-on:test="test('Sandra')"/>
+  <Button v-on:test="test('toto')"/>
   <Footer/>
   <Main/>
   </div>
@@ -26,12 +26,12 @@ export default {
   },
   methods : {
     test : function (string) {
-       
-      alert(string)
-      
+      alert (string)
     }
-    }
+  }
+  
  }
+
 
 </script>
 
